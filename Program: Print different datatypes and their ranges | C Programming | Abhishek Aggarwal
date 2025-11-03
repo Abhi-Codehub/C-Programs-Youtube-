@@ -1,0 +1,27 @@
+// Program: Write a Program to print different data types in 'C' and their ranges.
+
+#include <stdio.h>
+#include <limits.h>
+#include <float.h>
+
+int main()
+{
+    printf("Ranges of different data types in C are: \n\n");
+
+    printf("Char: %d to %d\n", CHAR_MIN, CHAR_MAX);
+    printf("Unsigned char: 0 to %d\n", UCHAR_MAX);
+
+    printf("Short: %d to %d\n", SHRT_MIN, SHRT_MAX);
+    printf("Unsigend short: 0 to %d\n", USHRT_MAX);
+
+    printf("Int: %d to %d\n", INT_MIN, INT_MAX);
+    printf("Unsigend int: 0 to %u\n", UINT_MAX);
+
+    printf("Long: %ld to %ld\n", LONG_MIN, LONG_MAX);
+    printf("Unsigned long: 0 to %lu\n", ULONG_MAX);
+
+    printf("Float: %e to %e\n", FLT_MIN, FLT_MAX);
+    printf("Double: %e to %e\n", DBL_MIN, DBL_MAX);
+
+    return 0;
+}
