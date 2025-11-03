@@ -1,0 +1,20 @@
+// Program:  Write a program to find whether the given year is a leap year or not.
+#include <stdio.h>
+
+int main()
+{
+    int year;
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    // check for a leap year
+    if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        printf("Given year is a leap year");
+    }
+    else {
+        printf("Given year is not a leap");
+    }
+
+    return 0;
+    
+}
