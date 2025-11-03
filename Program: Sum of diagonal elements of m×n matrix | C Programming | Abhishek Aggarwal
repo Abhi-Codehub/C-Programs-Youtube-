@@ -1,0 +1,30 @@
+// Program: Write a program that finds the sum of diagonal element of m x n matrix
+#include <stdio.h>
+
+int main()
+{
+    int m, n;
+    printf("Enter the number of rows(m): ");
+    scanf("%d", &m);
+    printf("Enter the number of columns(n): ");
+    scanf("%d", &n);
+
+    int arr[m][n];
+
+    printf("Enter elements of the matrix:\n");
+    for(int i = 0; i < m; i++){
+        for(int j = 0; j < n; j++) {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    int sum = 0;
+    // diagonal (i == j)
+    for(int i = 0; i < m && i < n; i++){
+        sum += arr[i][i];
+    }
+
+    printf("Sum of diagonal elements = %d\n", sum);
+
+    return 0;
+}
