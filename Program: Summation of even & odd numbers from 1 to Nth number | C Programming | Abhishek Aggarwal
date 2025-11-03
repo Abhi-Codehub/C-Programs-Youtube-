@@ -1,0 +1,29 @@
+// Program: write a program to print sum of even and odd numbers from 1 to N numbers
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int sumEven = 0;
+    int sumOdd = 0;
+
+    printf("Enter the number: ");
+    scanf("%d", &n);
+
+    // logic
+    for(int i = 1; i <= n; i++) {
+        // check if number is even or odd
+        if(i % 2 == 0) {
+            sumEven = sumEven + i;
+        }
+        else {
+            sumOdd = sumOdd + i;
+        }
+    }
+
+    // displaying the result
+    printf("Sum of even numbers from 1 to %d = %d\n", n, sumEven);
+    printf("Sum of odd numbers from 1 to %d = %d\n", n, sumOdd);
+
+    return 0;
+}
