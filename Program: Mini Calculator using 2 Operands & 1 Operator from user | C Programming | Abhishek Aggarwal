@@ -1,0 +1,49 @@
+// Program: Write a program that takes two operands and one operator from the user, perform the operation and prints the result by using switch statement...
+#include <stdio.h>
+
+int main()
+{
+    float num1, num2;
+    char op;
+
+    // taking the first number input
+    printf("Enter the first number: ");
+    scanf("%f", &num1);
+
+    // taking arithmetic expression as an input
+    printf("Enter an operator(+,-,*,/): ");
+    scanf(" %c", &op);
+
+    // taking the second number input
+    printf("Enter the Second number: ");
+    scanf("%f", &num2);
+
+    // building logic using switch statement
+    switch(op) {
+        case '+':
+            printf("Result = %.2f\n", num1 + num2);
+            break;
+
+        case '-':
+            printf("Result = %.2f\n", num1 - num2);
+            break;
+
+        case '*':
+            printf("Result = %.2f\n", num1 * num2);
+            break;
+
+        case '/':
+            if(num2 != 0)
+            {
+                printf("Result = %.2f\n", num1 / num2);
+            }
+            else
+                printf("Error not divisible by zero");
+            break;
+
+        default:
+            printf("Invalid operator\n");
+    }
+
+    return 0;
+}
