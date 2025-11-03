@@ -1,0 +1,23 @@
+// Program: Write a program to find the reverse of a number using a function
+#include <stdio.h>
+
+int rev = 0;
+int reverseNumber(int num) {
+    while (num > 0) {
+        rev = rev * 10 + (num % 10);
+        num = num / 10;
+    }
+    return rev;
+}
+
+int main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    int result = reverseNumber(n);
+    printf("Reverse = %d\n", result);
+
+    return 0;
+}
