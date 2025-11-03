@@ -1,0 +1,64 @@
+// Program: write a program to add and multiple two matrices of order n x n...
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter the order of matrices(n):");
+    scanf("%d", &n);
+
+    int A[n][n], B[n][n], Sum[n][n], Mul[n][n];
+
+    // input matrix A
+    printf("Enter the elements of Matrix A:\n");
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    // input matrix B
+    printf("Enter the elements of Matrix B:\n");
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            scanf("%d", &B[i][j]);
+        }
+    }
+
+    // addition of matrices
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            Sum[i][j] = A[i][j] + B[i][j];
+        }
+    }
+
+    // Matrix Multiplication
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            Mul[i][j] = 0;
+            for(int k = 0; k < n; k++) {
+                Mul[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+
+    // print sum matrix
+    printf("\n Sum of Matrices:\n");
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++){
+            printf("%d ", Sum[i][j]);
+        }
+        printf("\n");
+    }
+
+    // print matrix sum
+    printf("\nMultiplication of Matrices:\n");
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            printf("%d ", Mul[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
