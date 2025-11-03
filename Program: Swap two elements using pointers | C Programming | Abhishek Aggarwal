@@ -1,0 +1,32 @@
+// Program: Write a program to swap two numbers using the concept of pointers
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    int *p1, *p2;
+    int temp; // This variable is used in the swap logic
+
+    // taking input from user
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+
+    // assiging the addresss of the pointers
+    p1 = &a;
+    p2 = &b;
+
+    printf("\n Before swapping: \n");
+    printf("a = %d, b = %d\n", a, b);
+
+    // swapping using pointers
+    temp = *p1;
+    *p1 = *p2;
+    *p2 = temp;
+
+    printf("\n After swapping: \n");
+    printf("a = %d, b = %d\n", a, b);
+
+    return 0;
+}
