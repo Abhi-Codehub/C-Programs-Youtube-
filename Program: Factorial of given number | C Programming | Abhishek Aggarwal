@@ -1,0 +1,25 @@
+// Program: Write a program to find the factorial of a given number...
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    long long fact = 1;
+
+    printf("Enter the number: ");
+    scanf("%d", &n);
+
+    // checking for negative numbers
+    if(n < 0) {
+        printf("Factorial of given number doesn't exist.\n");
+    }
+    else {
+        // logic
+        for(int i = n; i >= 1; i--) {
+            fact = fact * i;
+        }
+        printf("Factorial of %d is : %lld\n", n, fact);
+    }
+
+    return 0;
+}
