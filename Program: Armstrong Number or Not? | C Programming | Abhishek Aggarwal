@@ -1,0 +1,27 @@
+// Program: Write a program to print armstrong number from 1 to 1000 using a function...
+#include <stdio.h>
+
+int isArmstrong(int num) {
+    int original = num, sum = 0, digit;
+    while(num > 0) {
+        digit = num % 10;
+        sum = sum + digit * digit * digit;
+        num = num / 10;
+    }
+
+    if(sum == original)
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    printf("Armstrong numbers between 1 to 1000 are:\n");
+    for(int i = 1; i <= 1000; i++) {
+        if(isArmstrong(i)){
+            printf("%d ", i);
+        }
+    }
+    return 0;
+}
