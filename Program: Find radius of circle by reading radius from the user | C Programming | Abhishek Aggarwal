@@ -1,0 +1,16 @@
+// Program:  Write a Program to read radius value from the keyboard and calculate the area of circle and print the result in both floating and exponential notation.
+
+#include <stdio.h>
+#define PI 3.14159
+
+int main()
+{
+    float radius, area;
+    printf("Enter the radius of the circle: ");
+    scanf("%f", &radius);
+
+    area = PI * radius * radius;
+    printf("Area (Floating point): %f\n", area);
+    printf("Area (exponential point): %e\n", area);
+    return 0;
+}
